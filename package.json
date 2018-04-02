@@ -1,0 +1,30 @@
+{
+  "name": "RNFGAuth",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "aws-amplify": "^0.2.14",
+    "aws-amplify-react-native": "^0.2.7",
+    "aws-appsync": "^1.0.14",
+    "aws-appsync-react": "^1.0.6",
+    "graphql-tag": "^2.8.0",
+    "react": "^16.3.0-alpha.1",
+    "react-apollo": "^2.1.1",
+    "react-native": "0.54.4",
+    "react-navigation": "^1.5.9",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.4.3",
+    "react-test-renderer": "^16.3.0-alpha.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
