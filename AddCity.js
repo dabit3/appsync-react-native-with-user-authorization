@@ -95,8 +95,6 @@ export default compose(
           let stopExecuting = false
           data.listCities.items.map(item => {
             if (item.id === createCity.id) {
-              console.log('item: ', item)
-              console.log('createCity: ', createCity)
               stopExecuting = true
             }
           })
