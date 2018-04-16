@@ -2,6 +2,10 @@
 #
 .DS_Store
 
+#AWS
+AppSync.js
+awsmobilejs
+
 # Xcode
 #
 build/
