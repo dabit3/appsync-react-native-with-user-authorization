@@ -17,7 +17,7 @@ import { ApolloProvider as Provider } from 'react-apollo';
 
 Amplify.configure(config)
 import { Auth } from 'aws-amplify'
- 
+
 const client = new Client({
   url: AppSync.graphqlEndpoint,
   region: AppSync.region,
