@@ -57,7 +57,7 @@ type City {
 }
 
 type Query {
-	fetchCity(id: ID): City
+  fetchCity(id: ID): City
 }
 ```
 
