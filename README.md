@@ -47,6 +47,8 @@ Visit the [AppSync](https://console.aws.amazon.com/appsync/home) console, click 
 
 2. Change Authorization Type to "Amazon Cognito User Pool". Choose User Pool created in first series of steps. Set "Default action" as "Allow"    
 
+![](https://imgur.com/awVuhCV.png)    
+
 3. Create the following Schema:    
 
 ```graphql
