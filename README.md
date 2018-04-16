@@ -65,6 +65,8 @@ type Query {
 
 5. Click "Data Sources" in the left menu, click on the table name under "Resource"    
 
+![](https://imgur.com/NtqKi1w.png)    
+
 6. Create an index of "author"    
 
 ![](https://i.imgur.com/AB4WllW.png)
