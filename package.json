@@ -7,8 +7,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "aws-amplify": "^0.2.14",
-    "aws-amplify-react-native": "^0.2.7",
+    "aws-amplify": "^0.3.0",
+    "aws-amplify-react-native": "^0.2.9",
     "aws-appsync": "^1.0.14",
     "aws-appsync-react": "^1.0.6",
     "graphql-tag": "^2.8.0",

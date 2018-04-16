@@ -57,6 +57,7 @@ buck-out/
 */fastlane/screenshots
 
 #awsmobilejs
+appsync-info.json
 aws-info.json
 project-info.json
 aws-exports.js

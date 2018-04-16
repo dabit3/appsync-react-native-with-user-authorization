@@ -715,21 +715,22 @@ atob@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.0.tgz#ab2b150e51d7b122b9efc8d7340c06b6c41076bc"
 
-aws-amplify-react-native@^0.2.7:
-  version "0.2.7"
-  resolved "https://registry.yarnpkg.com/aws-amplify-react-native/-/aws-amplify-react-native-0.2.7.tgz#f32b64e8f3e8f01b5e8b253af40c4fcf6b94781c"
+aws-amplify-react-native@^0.2.9:
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/aws-amplify-react-native/-/aws-amplify-react-native-0.2.9.tgz#38234c70332b8cd88ec952c00939fc6616e65f4e"
   dependencies:
-    aws-amplify "^0.2.x"
+    aws-amplify "^0.3.x"
     axios "^0.17.1"
     babel-preset-es2015 "^6.24.1"
 
-aws-amplify@^0.2.14, aws-amplify@^0.2.x:
-  version "0.2.14"
-  resolved "https://registry.yarnpkg.com/aws-amplify/-/aws-amplify-0.2.14.tgz#ed8fb7cfdb68ddb737c935b39723df6dc9874036"
+aws-amplify@^0.3.0, aws-amplify@^0.3.x:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/aws-amplify/-/aws-amplify-0.3.0.tgz#d6bf2871a706d4ecada51562a3251081dd2b4621"
   dependencies:
     amazon-cognito-identity-js "^2.0.0"
     aws-sdk "2.198.0"
     axios "^0.17.0"
+    graphql "^0.13.1"
     paho-mqtt "^1.0.4"
     uuid "^3.2.1"
     zen-observable "^0.8.6"
@@ -2601,6 +2602,12 @@ graphql@^0.11.7:
   dependencies:
     iterall "1.1.3"
 
+graphql@^0.13.1:
+  version "0.13.2"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.13.2.tgz#4c740ae3c222823e7004096f832e7b93b2108270"
+  dependencies:
+    iterall "^1.2.1"
+
 growl@~1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/growl/-/growl-1.7.0.tgz#de2d66136d002e112ba70f3f10c31cf7c350b2da"
@@ -3164,6 +3171,10 @@ istanbul-reports@^1.3.0:
 iterall@1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.1.3.tgz#1cbbff96204056dde6656e2ed2e2226d0e6d72c9"
+
+iterall@^1.2.1:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.2.2.tgz#92d70deb8028e0c39ff3164fdbf4d8b088130cd7"
 
 jasmine-growl-reporter@~0.0.2:
   version "0.0.3"
