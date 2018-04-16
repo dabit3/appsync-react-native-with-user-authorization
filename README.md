@@ -63,7 +63,7 @@ type Query {
 
 4. Click "Create Resources"    
 
-5. Click "Data Sources", click on the table name under "Resource"    
+5. Click "Data Sources" in the left menu, click on the table name under "Resource"    
 
 6. Create an index of "author"    
 
