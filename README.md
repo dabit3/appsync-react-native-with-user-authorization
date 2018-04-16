@@ -51,9 +51,9 @@ Visit the [AppSync](https://console.aws.amazon.com/appsync/home) console, click 
 
 ```graphql
 type City {
-	id: ID
-	name: String!
-	country: String
+  id: ID
+  name: String!
+  country: String
 }
 
 type Query {
@@ -63,7 +63,7 @@ type Query {
 
 4. Click "Create Resources"    
 
-5. Click "Data Sources", click on table under "Resource"    
+5. Click "Data Sources", click on the table name under "Resource"    
 
 6. Create an index of "author"    
 
@@ -90,7 +90,7 @@ type Query {
 }
 ```
 
-8. Update the ListCities request mapping template to the following:
+8. Update the "ListCities" request mapping template to the following:
 
 ```js
 {
