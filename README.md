@@ -40,3 +40,72 @@ awsmobile push
 
 
 ## AppSync Configuration
+
+1. Create new AppSync App
+
+Visit the [AppSync](https://console.aws.amazon.com/appsync/home) console, click "Create API"    
+
+2. Change Authorization Type to "Amazon Cognito User Pool". Choose User Pool created in first series of steps. Set "Default action" as "Allow"    
+
+3. Create the following Schema:    
+
+```graphql
+type City {
+	id: ID
+	name: String!
+	country: String
+}
+
+type Query {
+	fetchCity(id: ID): City
+}
+```
+
+4. Click "Create Resources"    
+
+5. Click "Data Sources", click on table under "Resource"    
+
+6. Create an index of "author"    
+
+![](https://i.imgur.com/AB4WllW.png)
+
+7. Update "CreateCity" request mapping template to the following:
+
+```js
+#set($attribs = $util.dynamodb.toMapValues($ctx.args.input))
+#set($attribs.author = $util.dynamodb.toDynamoDB($ctx.identity.username))
+{
+  "version": "2017-02-28",
+  "operation": "PutItem",
+  "key": {
+    "id": $util.dynamodb.toDynamoDBJson($ctx.args.input.id),
+  },
+  "attributeValues": $util.toJson($attribs),
+  "condition": {
+    "expression": "attribute_not_exists(#id)",
+    "expressionNames": {
+      "#id": "id",
+    },
+  },
+}
+```
+
+8. Update the ListCities request mapping template to the following:
+
+```js
+{
+  "version": "2017-02-28",
+  "operation": "Query",
+  "query": {
+  	"expression": "author = :author",
+    "expressionValues": {
+      ":author": { "S": "${ctx.identity.username}" }
+    }
+  },
+  "index": "author-index",
+  "limit": $util.defaultIfNull($ctx.args.first, 20),
+  "nextToken": $util.toJson($util.defaultIfNullOrEmpty($ctx.args.after, null)),
+}
+```
+
+9. Run project

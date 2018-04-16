@@ -18,23 +18,23 @@ import { ApolloProvider as Provider } from 'react-apollo';
 Amplify.configure(config)
 import { Auth } from 'aws-amplify'
 
-const client = new Client({
-  url: AppSync.graphqlEndpoint,
-  region: AppSync.region,
-  auth: {
-    type: AppSync.authenticationType,
-    apiKey: AppSync.apiKey
-  }
-});
-
 // const client = new Client({
 //   url: AppSync.graphqlEndpoint,
 //   region: AppSync.region,
 //   auth: {
-//     type: 'AMAZON_COGNITO_USER_POOLS',
-//     jwtToken: async () => (await Auth.currentSession()).getIdToken().getJwtToken(),
+//     type: AppSync.authenticationType,
+//     apiKey: AppSync.apiKey
 //   }
 // });
+
+const client = new Client({
+  url: AppSync.graphqlEndpoint,
+  region: AppSync.region,
+  auth: {
+    type: 'AMAZON_COGNITO_USER_POOLS',
+    jwtToken: async () => (await Auth.currentSession()).getIdToken().getJwtToken(),
+  }
+});
 
 import SignIn from './SignIn'
 import SignUp from './SignUp'
