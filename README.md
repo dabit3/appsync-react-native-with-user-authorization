@@ -8,34 +8,34 @@ This step will set up some basic 2 factor user authentication with the current p
 
 If you would like to set up your own user authentation mechanism this would also work, you would just need to update some logic in SignUp.js & SignIn.js.
 
-1. Install AWS Mobile CLI   
+1. Install Amplify CLI   
 
 ```bash
-npm i -g awsmobile-cli
+npm i -g @aws-amplify/cli
 ```
 
-2. Configure AWS Mobile CLI    
+2. Configure Amplify CLI    
 
 ```bash
-awsmobile configure
+amplify configure
 ```
 
-3. Create new AWS Mobile Project    
+3. Create new AWS Amplify Project    
 
 ```bash
-awsmobile init
+amplify init
 ```
 
 4. Add user signin to project    
 
 ```
-awsmobile user-signin enable
+amplify add auth
 ```
 
 5. Push updated configuration to the API    
 
 ```
-awsmobile push
+amplify push
 ```
 
 
